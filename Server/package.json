@@ -1,0 +1,27 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "type": "module",
+  "main": "src/index.js",
+  "author": "Tobi",
+  "description": "Internship project in code engine Feb 2025",
+  "license": "MIT",
+  "engines": {
+    "node": ">=20.x"
+  },
+  "scripts": {
+    "lint": "eslint src --ext js --report-unused-disable-directives --max-warnings 0",
+    "clean": "rm -rf build && mkdir build",
+    "start": "node src/index.js",
+    "dev": "nodemon src/index.js",
+    "production": "node src/index.js"
+  },
+  "dependencies": {
+    "express": "^4.21.2",
+    "swagger-jsdoc": "^6.2.8",
+    "swagger-ui-express": "^5.0.1"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.9"
+  }
+}
