@@ -1,0 +1,79 @@
+.Toastify__toast-container {
+  width: 350px;
+}
+.Toastify__toast {
+  border-radius: 10px;
+  padding: 16px;
+  font-weight: 400;
+  font-size: 13px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  box-shadow: 0px 4px 10px rgba(70, 70, 70, 0.1);
+}
+
+.Toastify__toast--success {
+  background-color: #ffffff !important;
+  color: #60c377 !important;
+  border-left: 5px solid #97f8ae;
+}
+
+.Toastify__toast--error {
+  background-color: #ffffff !important;
+  color: #df5d6a !important;
+  border-left: 5px solid #f6a3ab;
+}
+
+.Toastify__toast--warning {
+  background-color: #ffffff !important;
+  color: #e2c56c !important;
+  border-left: 5px solid #ffe28c;
+}
+
+.Toastify__toast--info {
+  background-color: #ffffff !important;
+  color: #78d2e0 !important;
+  border-left: 5px solid #87e3f1;
+}
+
+.Toastify__progress-bar {
+  height: 4px;
+  border-radius: 5px;
+}
+
+.Toastify__progress-bar--success {
+    background: linear-gradient(to right, #97f8ae, #3ebc5b) !important;
+}
+
+.Toastify__progress-bar--error {
+    background: linear-gradient(to right, #f6a3ab, #da3243) !important;
+}
+
+.Toastify__progress-bar--warning {
+    background: linear-gradient(to right, #ffe28c, #d4ad38) !important;
+}
+
+.Toastify__progress-bar--info {
+    background: linear-gradient(to right, #87e3f1, #3abfd3) !important;
+}
+
+.Toastify__close-button {
+  color: rgb(171, 170, 170) !important;
+  opacity: 1;
+}
+
+.Toastify__close-button:hover {
+  color: rgb(73, 72, 72) !important;
+}
+
+.Toastify__spinner {
+  border: 2px solid #56f67c !important;
+  border-top-color: #a9fabc !important; 
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  100% {
+    transform: rotate(360deg);
+  }
+}
