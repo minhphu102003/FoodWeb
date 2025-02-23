@@ -1,28 +1,38 @@
 {
   "name": "server",
   "version": "1.0.0",
-  "type": "module",
-  "main": "src/index.js",
-  "author": "Tobi",
-  "description": "Internship project in code engine Feb 2025",
-  "license": "MIT",
-  "engines": {
-    "node": ">=20.x"
-  },
+  "main": "index.js",
   "scripts": {
-    "lint": "eslint src --ext js --report-unused-disable-directives --max-warnings 0",
-    "clean": "rm -rf build && mkdir build",
-    "start": "node src/index.js",
-    "dev": "nodemon src/index.js",
-    "production": "node src/index.js"
+    "dev": "npx nodemon --ext ts --exec tsx src/index.ts",
+    "build": "rimraf ./dist && tsc && tsc-alias",
+    "start": "node dist/index.js",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
+    "prettier": "prettier --check .",
+    "prettier:fix": "prettier --write ."
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "@eslint/js": "^9.21.0",
+    "@types/express": "^5.0.0",
+    "@types/node": "^22.13.5",
+    "eslint": "^9.21.0",
+    "eslint-config-prettier": "^10.0.1",
+    "eslint-plugin-prettier": "^5.2.3",
+    "globals": "^16.0.0",
+    "nodemon": "^3.1.9",
+    "prettier": "^3.5.2",
+    "rimraf": "^6.0.1",
+    "tsc-alias": "^1.8.10",
+    "tsx": "^4.19.3",
+    "typescript": "^5.7.3",
+    "typescript-eslint": "^8.24.1"
   },
   "dependencies": {
     "dotenv": "^16.4.7",
-    "express": "^4.21.2",
-    "swagger-jsdoc": "^6.2.8",
-    "swagger-ui-express": "^5.0.1"
-  },
-  "devDependencies": {
-    "nodemon": "^3.1.9"
+    "express": "^4.21.2"
   }
 }
