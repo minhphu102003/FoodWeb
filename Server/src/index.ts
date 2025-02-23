@@ -1,19 +1,24 @@
-import express from 'express'
 import dotenv from 'dotenv'
-
 dotenv.config()
+
+import express from 'express'
+import { swaggerSpec, swaggerUi } from './config/swagger.js'
+import userRoutes from './routes/userRoutes.js'
+
 const app = express()
+
 const PORT = process.env.PORT || 3000
 
-// Middleware để đọc JSON
+const SERVER_URL = `http://localhost:${PORT}`
+
 app.use(express.json())
 
-// Route đơn giản
-app.get('/', (req, res) => {
-  res.send('Hello Express with TypeScript!')
-})
+// Routes
+app.use('/api/users', userRoutes)
 
-// Lắng nghe server
+// Swagger
+app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerSpec))
+
 app.listen(PORT, () => {
-  console.log(`🚀 Server running at http://localhost:${PORT}`)
+  console.log(`Server running at ${SERVER_URL}`)
 })
